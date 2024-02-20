@@ -1,0 +1,10 @@
+br\com\viniciusamori\todo\todolist\Task\TaskModel.class
+br\com\viniciusamori\todo\todolist\user\IUserRepository.class
+br\com\viniciusamori\todo\todolist\TodolistApplication.class
+br\com\viniciusamori\todo\todolist\errors\ExceptionHandlerController.class
+br\com\viniciusamori\todo\todolist\Filter\FilterTaskAuth.class
+br\com\viniciusamori\todo\todolist\Task\ITaskRepository.class
+br\com\viniciusamori\todo\todolist\Task\TaskController.class
+br\com\viniciusamori\todo\todolist\user\UserController.class
+br\com\viniciusamori\todo\todolist\user\UserModel.class
+br\com\viniciusamori\todo\todolist\utils\Utils.class
