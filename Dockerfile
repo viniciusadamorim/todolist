@@ -1,19 +1,17 @@
-FROM maven:latest AS build
+ROM ubuntu:latest AS build
 
-WORKDIR /app
+RUN apt-get update
+RUN apt-get install openjdk-19-jdk -y
 
-COPY pom.xml .
-RUN mvn dependency:go-offline
+COPY . .
 
-COPY src src
-RUN mvn package
+RUN apt-get install maven -y
+RUN mvn clean install
 
 FROM openjdk:11-jdk-slim
 
-WORKDIR /app
-
 EXPOSE 8080
 
-COPY --from=build /app/target/todolist-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /target/todolist-0.0.1-SNAPSHOT.jar app.jar
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
